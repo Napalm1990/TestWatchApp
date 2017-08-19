@@ -11,6 +11,9 @@ import Foundation
 
 
 class InterfaceController: WKInterfaceController {
+    
+    @IBOutlet var myLabel: WKInterfaceLabel!
+    
 
     override func awakeWithContext(context: AnyObject?) {
         super.awakeWithContext(context)
@@ -21,6 +24,8 @@ class InterfaceController: WKInterfaceController {
     override func willActivate() {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
+        
+        self.myLabel.setText("Hi");
     }
 
     override func didDeactivate() {
@@ -28,4 +33,12 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
 
+    @IBAction func upButton() {
+    }
+    
+    
+    @IBAction func downButton() {
+    }
 }
+
+
