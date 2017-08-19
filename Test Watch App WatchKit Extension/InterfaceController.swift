@@ -25,7 +25,6 @@ class InterfaceController: WKInterfaceController {
         // This method is called when watch view controller is about to be visible to user
         super.willActivate()
         
-        self.myLabel.setText("Hi");
     }
 
     override func didDeactivate() {
@@ -34,10 +33,12 @@ class InterfaceController: WKInterfaceController {
     }
 
     @IBAction func upButton() {
+        self.myLabel.setText("Up");
     }
     
     
     @IBAction func downButton() {
+        self.myLabel.setText("Down");
     }
 }
 
